@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NGO Website</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/homepage.css" />
+  </head>
+  <header><%- include('partials/navbar') %></header>
+  <body>
+    <div
+      class="containerrr bg-cover bg-center h-[740px]"
+      style="background-image: url('/images/BG Image.png')"
+    >
+      <div class="container flex">
+        <section class="hero">
+          <div class="hero-text">
+            <h1>
+              Everyday <br />
+              we Take <br />
+              A small Step <br />
+              To <span class="highlight">Bright Future</span>.
+            </h1>
+            <p>Your Help Matters, No Matter How Big Or Small.</p>
+          </div>
+          
+        </div>
+        </section>
+        <div class="hero-buttons">
+          <button style="background: orange; color: white">What we do</button>
+          <button class="video-btn">Play Video</button>
+        
+      </div>
+    </div>
+  </body>
+</html>
