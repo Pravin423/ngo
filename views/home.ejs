@@ -1,54 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NGO Website</title>
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/homepage.css" />
-  </head>
 
-  <body>
-    <header><%- include('partials/navbar') %></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGO Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/public/css/homepage.css">
+</head>
 
-    <main>
-      <div
-        class="containerrr bg-cover bg-center h-[740px]"
-        style="background-image: url('/images/BG Image.png')"
-      >
-        <div class="container flex flex-col md:flex-row items-start">
-          <!-- Left Side Text -->
-          <section class="hero w-full md:w-1/2 p-8">
-            <div class="hero-text">
-              <h1 class="text-white text-6xl font-bold leading-tight">
-                Everyday <br />
-                we Take <br />
-                A small Step <br />
-                To <span class="highlight">Bright Future</span>.
-              </h1>
-              <p class="text-white mt-4 text-lg">
-                Your Help Matters, No Matter How Big Or Small.
-              </p>
-            </div>
-          </section>
+<body class="bg-gray-100">
+  <header><%- include('partials/navbar') %></header>
 
-          <!-- Right Side Media -->
-          <div class="h-[383px] w-[318px] flex justify-center items-center p-8">
-            <video class="h-[383px] w-[318px]" controls>
-              <source src="#" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div class="hero-buttons flex space-x-4 mt-6">
-              <button style="background: orange; color: white">
-                What we do
-              </button>
-              <button style="background: orange; color: white">
-                Play Video
-              </button>
-            </div>
-          </div>
+  <!-- Hero Section -->
+  <div class="relative bg-cover h-[681px]" style="background-image: url('/images/BG Image.png')">
+
+    <div class="container mx-auto flex flex-col md:flex-row items-start px-10 pt-20">
+      <!-- Left Side Text -->
+      <section class="w-full md:w-2/2">
+        <h1 class="text-white text-6xl font-bold leading-tight">
+          Everyday <br />
+          we Take <br />
+          A small Step <br />
+          To <span class="text-orange-500">Bright Future</span>.
+        </h1>
+        <p class="text-white mt-4 text-lg">
+          Your Help Matters, No Matter How Big Or Small.
+        </p>
+      </section>
+
+      <!-- Right Side Media -->
+      <div class="relative h-[400px] w-screen flex flex-col items-center p-8 md:ml-20">
+        <video src="#" class="h-[383px] w-[500px] rounded-lg shadow-lg" controls>
+          <source src="#" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="flex space-x-7 mt-4">
+          <button class="bg-orange-500 text-white px-4 py-2 rounded">What we do</button>
+          <button class="bg-black text-white px-4 py-2 rounded">Play Video</button>
         </div>
+        <button class="absolute top-2 right-0 bg-green-500 text-white px-4 py-2 rounded">Plant now</button>
       </div>
-    </main>
-  </body>
+    </div>
+
+    <!-- Statistics Image Right-Aligned -->
+    <div class="flex justify-end pr-10 mt-16">
+      <img src="/images/Statistics.png" alt="" />
+    </div>
+
+  </div>
+
+  <!-- About Section ------------------------------------------------------------------------>
+   <div class="container flex w-[1311px]h-[488px]">
+    <div class="container">
+      <div class="container mx-auto mt-16 px-8">
+        <div class="relative">
+          <img src="/images/know us.png" alt="know about us">
+        </div>
+    
+      </div>
+      <div class="px-4 md:px-10 lg:px-20 xl:px-28">
+        <h2 class="text-[48px] font-bold mt-4">
+          "Empowering Lives,
+          <br> Uplifting Communities
+        </h2>
+        <h3 class="text-[48px] font-bold mt-4 ">
+          <span class="text-orange-500 text-stroke">Clean</span>,
+          <span class="text-white text-stroke">Educate</span>,
+          <span class="text-green-500 text-stroke">Inspire</span>!
+        </h3>
+        
+        
+                
+        <p class="text-gray-700 mt-4 w-[605px]">
+          Driven by our vision to balance nature and culture, SHIVSHANTI
+          PRATISTHAN is dedicated to transforming the way we interact with our
+          surroundings. From clean-up campaigns to community outreach, every step
+          is a step toward a brighter future.
+        </p>
+        <br>
+        <br>
+        <button class="bg-green-500 text-white border-2 border-green-700 px-6 py-2 mt-4 rounded">
+          Learn more
+        </button>
+        
+      </div>
+    
+    </div>
+    
+  
+  
+    <!-- Image Section -->
+    <div class="container mx-auto mt-16 px-20 w-full">
+      <div class="relative w-full md:w-2/2">
+        <img src="/images/real work real change.png" alt="Tree plantation event" class="rounded-lg shadow-lg" />
+        <p class="absolute bottom-4 left-2/2 -translate-x-2/2 font-bold text-white px-4 py-1 text-4xl  rounded">
+          <span class="text-orange-500">REAL </span>
+          <span class="text-white">WORK</span>,
+          <span class="text-white">REAL</span>
+          <span class="text-green-500">CHANGE</span>
+        </p>
+      </div>
+    </div>
+    
+   </div>
+
+   <!-- snake--------------------------- -->
+   <div class="py-24"></div>
+
+    <div class="container px-4 md:px-10 lg:px-20 xl:px-30 flex justify-center">
+      <img src="/images/snakenew1.png" alt="">
+    </div>
+    
+    
+
+
+    <div class="py-24"></div>
+    <div class="container"><div class="container mx-auto mt-16 px-8">
+      <div class="relative">
+        <img src="/images/project_have_done.png" alt="project done">
+      </div>
+      <div class="py-15"></div>
+      <h1>aa</h1>
+
+  
+    </div>
+    </div>
+
+    
+    
+    
+  
+</body>
+
 </html>
