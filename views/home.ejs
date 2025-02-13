@@ -13,24 +13,18 @@
   <header><%- include('partials/navbar') %></header>
 
   <!-- Hero Section -->
-  <div class="relative bg-cover h-[681px]" style="background-image: url('/images/BG Image.png')">
-
-    <div class="container mx-auto flex flex-col md:flex-row items-start px-10 pt-20">
-      <!-- Left Side Text -->
-      <section class="w-full md:w-2/2">
+  <div class="relative bg-cover h-[681px] w-[1400px] mx-auto" style="background-image: url('/images/BG Image.png')">
+    <div class="flex items-start px-10 pt-20">
+      <section class="w-[700px]">
         <h1 class="text-white text-6xl font-bold leading-tight">
           Everyday <br />
           we Take <br />
           A small Step <br />
           To <span class="text-orange-500">Bright Future</span>.
         </h1>
-        <p class="text-white mt-4 text-lg">
-          Your Help Matters, No Matter How Big Or Small.
-        </p>
+        <p class="text-white mt-4 text-lg">Your Help Matters, No Matter How Big Or Small.</p>
       </section>
-
-      <!-- Right Side Media -->
-      <div class="relative h-[400px] w-screen flex flex-col items-center p-8 md:ml-20">
+      <div class="relative h-[400px] w-[600px] p-8 ml-20">
         <video src="#" class="h-[383px] w-[500px] rounded-lg shadow-lg" controls>
           <source src="#" type="video/mp4" />
           Your browser does not support the video tag.
@@ -42,107 +36,76 @@
         <button class="absolute top-2 right-0 bg-green-500 text-white px-4 py-2 rounded">Plant now</button>
       </div>
     </div>
-
-    <!-- Statistics Image Right-Aligned -->
-    <div class="flex justify-end pr-10 mt-16">
-      <img src="/images/Statistics.png" alt="" />
+    <div class="pr-10 mt-16 text-right">
+      <img src="/images/Statistics.png" alt="" class="inline-block" />
     </div>
-
   </div>
-
-  <!-- About Section ------------------------------------------------------------------------>
-  <div class="container flex w-[1311px]h-[488px]">
-    <div class="container">
-      <div class="container mx-auto mt-16 px-8">
-        <div class="relative">
-          <img src="/images/know us.png" alt="know about us">
-        </div>
-
-      </div>
-      <div class="px-4 md:px-10 lg:px-20 xl:px-28">
-        <h2 class="text-[48px] font-bold mt-4">
-          "Empowering Lives,
-          <br> Uplifting Communities
-        </h2>
-        <h3 class="text-[48px] font-bold mt-4 ">
-          <span class="text-orange-500 text-stroke">Clean</span>,
-          <span class="text-white text-stroke">Educate</span>,
-          <span class="text-green-500 text-stroke">Inspire</span>!
-        </h3>
-
-
-
-        <p class="text-gray-700 mt-4 w-[605px]">
-          Driven by our vision to balance nature and culture, SHIVSHANTI
-          PRATISTHAN is dedicated to transforming the way we interact with our
-          surroundings. From clean-up campaigns to community outreach, every step
-          is a step toward a brighter future.
-        </p>
-        <br>
-        <br>
-        <button class="bg-green-500 text-white border-2 border-green-700 px-6 py-2 mt-4 rounded">
-          Learn more
-        </button>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- Image Section -->
-    <div class="container mx-auto mt-16 px-20 w-full">
-      <div class="relative w-full md:w-2/2">
-        <img src="/images/real work real change.png" alt="Tree plantation event" class="rounded-lg shadow-lg" />
-        <p class="absolute bottom-4 left-2/2 -translate-x-2/2 font-bold text-white px-4 py-1 text-4xl  rounded">
-          <span class="text-orange-500">REAL </span>
-          <span class="text-white">WORK</span>,
-          <span class="text-white">REAL</span>
-          <span class="text-green-500">CHANGE</span>
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- snake--------------------------- -->
   <div class="py-24"></div>
 
-  <div class="container px-4 md:px-10 lg:px-20 xl:px-30 flex justify-center">
+  <!-- About Section -->
+  <div class="w-[1400px] mx-auto flex">
+    <div class="w-[700px] px-8">
+      <img src="/images/know us.png" alt="know about us">
+      <h2 class="text-[48px] font-bold mt-4">"Empowering Lives, <br> Uplifting Communities</h2>
+      <h3 class="text-[48px] font-bold mt-4">
+        <span class="text-orange-500 text-stroke">Clean</span>,
+        <span class="text-white text-stroke">Educate</span>,
+        <span class="text-green-500 text-stroke">Inspire</span>!
+      </h3>
+      <p class="text-gray-700 mt-4 w-[605px]">
+        Driven by our vision to balance nature and culture, SHIVSHANTI
+        PRATISTHAN is dedicated to transforming the way we interact with our
+        surroundings. From clean-up campaigns to community outreach, every step
+        is a step toward a brighter future.
+      </p>
+      <br><br>
+      <button class="bg-green-500 text-white border-2 border-green-700 px-6 py-2 mt-4 rounded">Learn more</button>
+    </div>
+    <div class="w-[700px] px-20">
+      <img src="/images/real work real change.png" alt="Tree plantation event" class="rounded-lg shadow-lg" />
+      <p class="absolute bottom-4 left-2/2 -translate-x-2/2 font-bold text-white px-4 py-1 text-4xl">
+        <span class="text-orange-500">REAL </span>
+        <span class="text-white">WORK</span>,
+        <span class="text-white">REAL</span>
+        <span class="text-green-500">CHANGE</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Snake Section -->
+  <div class="py-24"></div>
+  <div class="w-[1400px] mx-auto text-center">
     <img src="/images/snakenew1.png" alt="">
   </div>
 
-
-
-
+  <!-- Projects Section -->
   <div class="py-24"></div>
-  <div class="container">
-    <div class="container mx-auto mt-16 px-8">
-      <div class="relative">
-        <img src="/images/project_have_done.png" alt="project done">
+  <div class="w-[1301px] mx-auto text-center">
+    <img src="/images/project_have_done.png" alt="project done">  
+    <br><br><br>
+    <h1 class="text-4xl font-bold text-[#1a1d29]">Helping hands, hopeful hearts – working for a better world.</h1>
+    <br><br><br>
+    <div class="flex justify-evenly text-center">
+      <div class=" project1 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg" style="background-image: url('/images/Project11.png')">
+        <h2 class="text-3xl font-bold text-white ml-0 mt-[100px]">Go Green Revolution</h2> 
+        <br>
+        <p class="text-white mt-[50px] w-[310px] ml-[45px]">  Over 3500 Plants Planted: As part of the "Go Green Revolution," more than 3500 trees have been planted across various regions.</p>
       </div>
-      <br><br><br>
-      <div class="text11 w-full px-4 md:px-10 lg:px-20 xl:px-28 flex justify-center text-center">
-        <h1 class="text-4xl font-bold text-[#1a1d29] max-w-6xl">Helping hands, hopeful hearts – working for a better
-          world.</h1>
+      <div class=" project2 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg" style="background-image: url('/images/Project22.png')">
+        <h2 class="text-3xl font-bold text-white ml-0 mt-[100px]">Lakes Cleaned</h2> 
+        <br>
+        <p class="text-white mt-[50px] w-[310px] ml-[45px]">  Lakes cleaned in various locations, including pre- and post-Chhath Pooja, to ensure the community's environmental sustainability.</p>
+        
       </div>
-      <br><br><br>
-      <div class="w-full max-w-[1274px] px-4 md:px-10 lg:px-20 xl:px-28 flex justify-between text-center mx-auto">
-        <div class="bg-gray-800 rounded-2xl shadow-lg">
-          <img src="/images/Project.png" alt="">
-        </div>
-        <div class="h-[421px] w-[408px] bg-gray-800 rounded-2xl shadow-lg"></div>
-        <div class="h-[421px] w-[408px] bg-gray-800 rounded-2xl shadow-lg"></div>
+      <div class=" project3 bg-gray-800 w-[410px] h-[421px] rounded-[12px] shadow-lg" style="background-image: url('/images/Project33.png')">
+        <h2 class="text-3xl font-bold text-white ml-0 mt-[50px]">Personal Vehicle Transformed into an Ambulance</h2> 
+        <br>
+        <p class="text-white mt-[20px] w-[310px] ml-[45px]"> During the COVID-19 crisis, Mr. Vinay Kumar Singh converted his own car into an ambulance, providing free emergency transportation to over 55 patients in need.</p>
+        
       </div>
-      
-      
-      
     </div>
-
-
-
-
+  </div>
+  <h1>test</h1>
 
 </body>
-
 </html>
