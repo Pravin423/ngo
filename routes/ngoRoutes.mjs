@@ -8,6 +8,10 @@ router.get("/", (req, res) => {
   res.render("home");
 });
 
+router.get("/about", (req, res) => {
+  res.render("aboutus");
+  });
+
 // Donation Page
 router.get("/donate", (req, res) => {
   res.render("donate");

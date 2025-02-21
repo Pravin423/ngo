@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Shivshanti Pratisthan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/css/homepage.css" />
+    <link rel="stylesheet" href="/public/css/about.css" />
+  </head>
+  <body class="text-white">
+    <!-- Navbar -->
+    <header><%- include('partials/navbar') %></header>
+
+    <!-- About Us Section -->
+    <section class="container mx-auto px-5">
+      <!-- About Us Image -->
+      <div class="flex justify-start m-4 mt-8">
+        <img class="w-50 h-auto" src="/images/know us.png" alt="Know Us" />
+      </div>
+
+      <!-- About Us Content -->
+      <div
+        class="mt-12 bg-cover bg-center rounded-lg py-12 px-6 lg:px-20"
+        style="background-image: url('/images/aboutusbackground.png')"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div>
+            <h2 class="text-xl font-semibold text-white">OUR JOURNEY</h2>
+            <h1 class="text-5xl font-bold text-[#F95406] mt-3">
+              Shivshanti <span class="text-[#02C720]">Pratisthan</span>
+            </h1>
+
+            <p class="text-gray-300 font-medium mt-5 max-w-lg">
+              Founded by <strong>Mr. Vinay Kumar Singh</strong>, Shivshanti
+              Pratisthan began with a vision to uplift society through selfless
+              service. From providing free education to underprivileged children
+              to leading environmental initiatives like the
+              <strong>Go Green Revolution</strong>, the organization has
+              continually worked toward positive change. <br /><br />
+              During the COVID-19 crisis, the foundation stepped up by
+              converting personal vehicles into ambulances, ensuring emergency
+              aid reached those in need. Through relentless efforts in
+              cleanliness drives, cultural programs, and community welfare,
+              Shivshanti Pratisthan continues to inspire and empower, building a
+              healthier, greener, and more compassionate society.
+            </p>
+
+            <!-- Achievements -->
+            <div class="flex flex-wrap gap-8 mt-8">
+              <div>
+                <h3 class="text-3xl font-bold">3500+</h3>
+                <p class="text-gray-400 text-sm">Trees Planted</p>
+              </div>
+              <div>
+                <h3 class="text-3xl font-bold">55+</h3>
+                <p class="text-gray-400 text-sm">Free Ambulance Services</p>
+              </div>
+              <div>
+                <h3 class="text-3xl font-bold">100+</h3>
+                <p class="text-gray-400 text-sm">
+                  Underprivileged Students Educated Every Year
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Content (Founder Image) -->
+          <div class="flex flex-col ml-[300px] items-center">
+            <img
+              class="w-90 h-auto rounded-lg shadow-lg"
+              src="/images/face.png"
+              alt="Mr. Vinay Kumar Singh"
+            />
+            <div
+              class="flex flex-col items-center container border w-[400px] mt-2 rounded-[160px]"
+            >
+              <h2 class="text-xl font-semibold text-gray-400 mt-1">Director</h2>
+              <h2 class="text-2xl font-semibold mt-1 text-center mb-3">
+                Mr. Vinay Kumar Singh
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto px-[100px] mt-[100px]">
+      <div class="vision_mission p-3 justify-evenly  flex mt-10">
+
+        <div class="container w-[500px] h-auto">
+          <h1 class="text-black font-bold text-xl">OUR MISSION</h1>
+          <br>
+
+          <h1 class="text-4xl font-bold text-black">
+            Empowering Communities, Transforming Lives
+          </h1>
+          <br>
+          <p class="text-gray-600 font-normal text-lg ">
+            To drive social change by promoting education, environmental
+            sustainability, and community welfare. Through initiatives like free
+            education, cleanliness drives, and healthcare support, we strive to
+            create a cleaner, greener, and more empowered society.
+          </p>
+        </div>
+        <div class="container w-[500px] h-auto">
+          <h1 class="text-black font-bold text-xl">OUR VISION</h1>
+          <br>
+
+
+          <h1 class="text-4xl font-bold text-black ">Vision of the Organization:</h1>
+          <br>  
+          <br>
+          <p class="text-gray-600 font-normal text-lg"> 
+            To create a cleaner, healthier, and more sustainable society by
+            engaging communities in social welfare activities, environmental
+            conservation, and public health initiatives. The organization aims
+            to foster a sense of responsibility, respect, and unity among
+            individuals while promoting the well-being of both people and the
+            environment, ensuring a better quality of life.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
