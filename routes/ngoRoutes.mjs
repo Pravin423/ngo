@@ -12,6 +12,10 @@ router.get("/about", (req, res) => {
   res.render("aboutus");
   });
 
+  router.get("/gallery", (req, res) => {
+    res.render("gallery");
+    });
+
 // Donation Page
 router.get("/donate", (req, res) => {
   res.render("donate");
