@@ -37,4 +37,16 @@ router.get("/success", (req, res) => {
   res.render("success");
 });
 
+router.get("/contact", (req, res) => {
+  res.render("contact");
+  });
+
+  router.get("/news", (req, res) => {
+    res.render("news");
+    });
+
+    router.get("/wedo", (req, res) => {
+      res.render("wedo");
+      });
+
 export default router;
