@@ -3,25 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT US</title>
+    <title>Contact Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/public/css/homepage.css" />
-    <link rel="stylesheet" href="/public/css/about.css" />
+    <link rel="stylesheet" href="/public/css/contact.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            text-align: center;
+        }
+        .contact-info {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: left;
+            padding: 20px;
+            background: #1f2937;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
         <%- include('partials/navbar') %>
     </header>
-    <h1>CONTACT US</h1>
-    <section class="flex justify-center items-center ml-[270px] ">
-        <div class="container">
-            <div class="row">
-                <br>    
-                <%- include('partials/update') %>
-    
-            </div>
-        </div>
-    </section>
-    
+    <div class="contact-info">
+        <h2>Our Contact Information</h2>
+        <p><strong>Phone:</strong> 7738670360</p>
+        <p><strong>Email:</strong> v_shivshanti@rediffmail.com</p>
+        <p><strong>Address:</strong>Kamghar Hospital Road Thane (West) 400 604</p>
+    </div>
+    <%- include('partials/footer') %>
+    </header>
 </body>
 </html>
