@@ -1,69 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Donate to NGO</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Donation</title>
     <style>
-        body {
+        .body1 {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-
-        h1 {
-            margin-top: 50px;
-            color: #333;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        form {
-            width: 500px;
-            margin: 20px auto;
+            max-width: 600px;
+            margin: 0 auto;
             padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s;
         }
-
-        form:hover {
-            transform: scale(1.05);
+        .form-group {
+            margin-bottom: 15px;
         }
-
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
         input {
-            width: 80%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border 0.3s;
-        }
-
-        input:focus {
-            border-color: #28a745;
-            outline: none;
-        }
-
-        button {
             width: 100%;
-            padding: 12px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
+            padding: 8px;
+            box-sizing: border-box;
         }
-
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
         button:hover {
-            background-color: #218838;
-            transform: translateY(-2px);
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -71,14 +39,88 @@
     <header>
         <%- include('partials/navbar') %>
     </header>
-    <h1>Support Our Cause</h1>
-    <form action="/donate" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="number" name="amount" placeholder="Donation Amount" required>
-        <button type="submit">Donate</button>
+    <div class="body1">
+        <h1>Make a Donation</h1>
+    <form id="donationForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="amount">Amount (₹):</label>
+            <input type="number" id="amount" name="amount" min="1" required>
+        </div>
+        <button type="submit">Donate Now</button>
     </form>
+
+    <!-- Razorpay Checkout Script -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const amount = document.getElementById('amount').value;
+
+            // Step 1: Create order on the server
+            const response = await fetch('/create-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, amount })
+            });
+            const orderData = await response.json();
+
+            if (!orderData.id) {
+                alert('Error creating order: ' + (orderData.error || 'Unknown error'));
+                return;
+            }
+
+            // Step 2: Open Razorpay checkout
+            const options = {
+                key: orderData.key, // Razorpay Key ID from server
+                amount: orderData.amount, // Amount in paise
+                currency: 'INR',
+                name: 'Your Organization Name',
+                description: 'Donation',
+                order_id: orderData.id, // Order ID from server
+                handler: async function (response) {
+                    // Step 3: Verify payment on the server
+                    const verifyResponse = await fetch('/verify-payment', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_signature: response.razorpay_signature
+                        })
+                    });
+                    const verifyData = await verifyResponse.json();
+
+                    if (verifyData.status === 'success') {
+                        window.location.href = `/success/${verifyData.orderId}`;
+                    } else {
+                        alert('Payment verification failed!');
+                    }
+                },
+                prefill: {
+                    name: name,
+                    email: email
+                },
+                theme: {
+                    color: '#4CAF50'
+                }
+            };
+
+            const rzp = new Razorpay(options);
+            rzp.open();
+        });
+    </script>
+    </div>
     
 </body>
-
 </html>
