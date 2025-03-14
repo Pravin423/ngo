@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/public/css/homepage.css" />
     <link rel="stylesheet" href="/public/css/about.css" />
     <style>
-        /* Hover Effect */
+
         .gallery-img {
             transition: transform 0.3s ease-in-out;
         }
@@ -17,7 +17,7 @@
             transform: scale(1.1);
         }
 
-        /* Modal for full-screen zoom */
+
         .modal {
             position: fixed;
             top: 0;
@@ -51,7 +51,7 @@
         <%- include('partials/navbar') %>
     </header>
 
-    <!-- News Section -->
+
     <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
         <h2 class="text-4xl font-extrabold text-blue-600 text-center mb-6 uppercase tracking-widest">News</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -63,7 +63,7 @@
         </div>
     </section>
 
-    <!-- Planting & Cleaning Section -->
+
     <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
         <h2 class="text-4xl font-extrabold text-green-600 text-center mb-6 uppercase tracking-widest">Planting & Cleaning</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -75,7 +75,7 @@
         </div>
     </section>
 
-    <!-- COVID Section -->
+
     <section class="max-w-6xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
         <h2 class="text-4xl font-extrabold text-red-600 text-center mb-6 uppercase tracking-widest">COVID</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -87,13 +87,13 @@
         </div>
     </section>
 
-    <!-- Modal for Zoom -->
+
     <div id="modal" class="modal">
         <img id="modalImg" src="" alt="">
     </div>
 
     <script>
-        // JavaScript for Modal Image Zoom
+
         const modal = document.getElementById("modal");
         const modalImg = document.getElementById("modalImg");
         const images = document.querySelectorAll(".gallery-img");
