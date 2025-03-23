@@ -7,7 +7,23 @@
   <title>NGO Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/public/css/homepage.css">
+
 </head>
+<style>
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .animate-slide-in {
+    animation: slideIn 1s ease-out forwards;
+  }
+</style>
 
 <body class="bg-gray-100">
   <header><%- include('partials/navbar') %></header>
@@ -16,25 +32,18 @@
   <div class="relative bg-cover h-[681px] w-screen mx-auto" style="background-image: url('/images/backgroundcheck2.jpg')">
     <div class="flex items-start px-10 pt-20">
       <section class="w-[700px]">
-        <h1 class="text-white text-6xl font-bold leading-tight">
+        <h1 class="text-white text-6xl font-bold leading-tight animate-slide-in">
           Everyday <br />
           we Take <br />
           A small Step <br />
           To <span class="text-orange-500">Bright Future</span>.
         </h1>
-        <p class="text-white mt-4 text-lg">Your Help Matters, No Matter How Big Or Small.</p>
+      
+        <p class="text-white mt-4 text-lg animate-slide-in" style="animation-delay: 0.3s;">
+          Your Help Matters, No Matter How Big Or Small.
+        </p>
       </section>
-      <!-- <div class="relative h-[400px] w-[600px] p-8 ml-20">
-        <video src="#" class="h-[383px] w-[500px] rounded-lg shadow-lg" controls>
-          <source src="#" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="flex space-x-7 mt-4">
-          <button class="bg-orange-500 text-white px-4 py-2 rounded">What we do</button>
-          <button class="bg-black text-white px-4 py-2 rounded">Play Video</button>
-        </div>
-        <button class="absolute top-2 right-0 bg-green-500 text-white px-4 py-2 rounded">Plant now</button>
-      </div> -->
+
     </div>
     <div class="pr-10 mt-16 text-center">
       <img src="/images/Statistics.png" alt="" class="inline-block" />
